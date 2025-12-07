@@ -34,17 +34,17 @@ const BackgroundWords: React.FC = () => {
                 <group key={word.id} position={word.position}>
                     {/* Make text look at center (0,0,0) so it's readable from inside */}
                     <Text
-                        color="#ffffff"
-                        fontSize={2}
+                        color="#ff0000" // Changed to red to be more visible
+                        fontSize={3}    // Increased size
                         maxWidth={20}
                         lineHeight={1}
                         letterSpacing={0.05}
                         textAlign="center"
-                        font="https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmj5BN2Azc.woff2"
+                        // Removed external font to ensure it loads
                         anchorX="center"
                         anchorY="middle"
                         onUpdate={(self) => self.lookAt(0, 0, 0)}
-                        fillOpacity={0.4} // Subtle
+                        fillOpacity={0.8} // Increased opacity
                     >
                         {PHRASE}
                     </Text>
