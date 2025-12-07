@@ -15,11 +15,11 @@ const Overlay: React.FC<OverlayProps> = ({ treeState, onToggle, isTransitioning 
       <header className="flex justify-between items-start">
         <div>
           {/* --- EDIT TITLE HERE --- */}
-          <h1 className="text-[rgb(189,54,52)] font-serif text-3xl md:text-5xl tracking-widest uppercase" style={{ fontFamily: 'Cinzel, serif' }}>
+          <h1 className="text-[rgb(189,54,52)] text-3xl md:text-5xl tracking-widest uppercase font-bold" style={{ fontFamily: '"Indie Flower", cursive' }}>
             Happy <span className="text-[#8B0000]">Christmas</span> <span className="text-[#8B0000]">2025</span>
           </h1>
           {/* --- EDIT SUBTITLE HERE --- */}
-          <p className="bg-gradient-to-r from-pink-300 to-pink-500 bg-clip-text text-transparent text-xs md:text-sm mt-2 tracking-[0.3em] uppercase font-sans font-bold">
+          <p className="bg-gradient-to-r from-pink-300 to-pink-500 bg-clip-text text-transparent text-lg md:text-xl mt-2 tracking-[0.1em] font-bold" style={{ fontFamily: '"Indie Flower", cursive' }}>
             The Third Christmas We Celebrate Together 
           </p>
         </div>

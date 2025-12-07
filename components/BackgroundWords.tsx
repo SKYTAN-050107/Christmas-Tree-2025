@@ -3,27 +3,23 @@ import React, { useMemo } from 'react';
 import { Text } from '@react-three/drei';
 import * as THREE from 'three';
 
-const WORD_COUNT = 15;
-const PHRASE = "I love you Neo Jen Suen";
+const WORD_COUNT = 8;
+const PHRASE = "I love you Neo Jen Suen 🎄✨";
 
 const BackgroundWords: React.FC = () => {
-    // Generate random positions on a large sphere
+    // Generate positions in a single ring (circle) on the XZ plane
     const words = useMemo(() => {
         return new Array(WORD_COUNT).fill(0).map((_, i) => {
-            // Spherical distribution at large radius (universe background)
-            const radius = 45;
-            const theta = Math.random() * Math.PI * 2;
-            const phi = Math.acos(2 * Math.random() - 1);
+            const radius = 60; // Further away
+            const angle = (i / WORD_COUNT) * Math.PI * 2;
             
-            const x = radius * Math.sin(phi) * Math.cos(theta);
-            const y = radius * Math.sin(phi) * Math.sin(theta);
-            const z = radius * Math.cos(phi);
+            const x = radius * Math.cos(angle);
+            const y = 0; // Keep it level with the tree base
+            const z = radius * Math.sin(angle);
             
             return {
                 id: i,
                 position: new THREE.Vector3(x, y, z),
-                // Slight random rotation for artistic feel
-                rotationZ: (Math.random() - 0.5) * 0.5 
             };
         });
     }, []);
@@ -34,17 +30,17 @@ const BackgroundWords: React.FC = () => {
                 <group key={word.id} position={word.position}>
                     {/* Make text look at center (0,0,0) so it's readable from inside */}
                     <Text
-                        color="#ff0000" // Changed to red to be more visible
-                        fontSize={3}    // Increased size
-                        maxWidth={20}
+                        color="#FF1493" // Bright Pink
+                        fontSize={2.5}
+                        maxWidth={30}
                         lineHeight={1}
-                        letterSpacing={0.05}
+                        letterSpacing={0.1}
                         textAlign="center"
-                        // Removed external font to ensure it loads
+                        font="https://fonts.gstatic.com/s/indieflower/v17/m8JVjfKrXd_kj4LFnmLo8U1r.woff2" // Indie Flower font
                         anchorX="center"
                         anchorY="middle"
                         onUpdate={(self) => self.lookAt(0, 0, 0)}
-                        fillOpacity={0.8} // Increased opacity
+                        fillOpacity={0.9}
                     >
                         {PHRASE}
                     </Text>
