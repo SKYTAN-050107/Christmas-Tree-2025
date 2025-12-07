@@ -16,10 +16,10 @@ const Overlay: React.FC<OverlayProps> = ({ treeState, onToggle, isTransitioning 
         <div>
           {/* --- EDIT TITLE HERE --- */}
           <h1 
-            className="text-white text-2xl md:text-4xl tracking-widest uppercase font-bold animate-flicker" 
+            className="text-[#FFFF00] text-2xl md:text-4xl tracking-widest uppercase font-bold animate-flicker" 
             style={{ 
               fontFamily: '"Sacramento", cursive',
-              textShadow: '0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 90px #ff0000'
+              textShadow: '0 0 5px #FFFF00, 0 0 10px #FFFF00, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 90px #ff0000'
             }}
           >
             Merry <span>Christmas</span> <span>2025</span>
