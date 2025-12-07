@@ -16,14 +16,14 @@ const FRAME_COLOR = new THREE.Color("#D4AF37");
 
 // --- USER EDIT: INSERT PHOTO URLS HERE ---
 const USER_PHOTOS = [
-    "/photo/WhatsApp Image 2025-12-07 at 16.32.07_7592e0e7.jpg",
-    "/photo/WhatsApp Image 2025-12-07 at 16.34.51_be9c892a.jpg",
-    "/photo/WhatsApp Image 2025-12-07 at 16.36.05_d0559b8c.jpg",
-    "/photo/WhatsApp Image 2025-12-07 at 16.37.43_ea514a1a.jpg",
-    "/photo/WhatsApp Image 2025-12-07 at 16.38.05_453538b6.jpg",
-    "/photo/WhatsApp Image 2025-12-07 at 16.38.42_44fce902.jpg",
-    "/photo/WhatsApp Image 2025-12-07 at 16.40.17_2604e7bf.jpg",
-    "/photo/WhatsApp Image 2025-12-07 at 16.41.35_dbc9af75.jpg",
+    `${import.meta.env.BASE_URL}photo/WhatsApp Image 2025-12-07 at 16.32.07_7592e0e7.jpg`,
+    `${import.meta.env.BASE_URL}photo/WhatsApp Image 2025-12-07 at 16.34.51_be9c892a.jpg`,
+    `${import.meta.env.BASE_URL}photo/WhatsApp Image 2025-12-07 at 16.36.05_d0559b8c.jpg`,
+    `${import.meta.env.BASE_URL}photo/WhatsApp Image 2025-12-07 at 16.37.43_ea514a1a.jpg`,
+    `${import.meta.env.BASE_URL}photo/WhatsApp Image 2025-12-07 at 16.38.05_453538b6.jpg`,
+    `${import.meta.env.BASE_URL}photo/WhatsApp Image 2025-12-07 at 16.38.42_44fce902.jpg`,
+    `${import.meta.env.BASE_URL}photo/WhatsApp Image 2025-12-07 at 16.40.17_2604e7bf.jpg`,
+    `${import.meta.env.BASE_URL}photo/WhatsApp Image 2025-12-07 at 16.41.35_dbc9af75.jpg`,
 ];
 
 // 1. Procedural Texture Generation
