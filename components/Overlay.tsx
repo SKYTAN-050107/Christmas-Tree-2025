@@ -15,11 +15,23 @@ const Overlay: React.FC<OverlayProps> = ({ treeState, onToggle, isTransitioning 
       <header className="flex justify-between items-start">
         <div>
           {/* --- EDIT TITLE HERE --- */}
-          <h1 className="text-[rgb(189,54,52)] text-3xl md:text-5xl tracking-widest uppercase font-bold" style={{ fontFamily: '"Indie Flower", cursive' }}>
-            Happy <span className="text-[#8B0000]">Christmas</span> <span className="text-[#8B0000]">2025</span>
+          <h1 
+            className="text-[rgb(255,50,50)] text-4xl md:text-6xl tracking-widest uppercase font-bold" 
+            style={{ 
+              fontFamily: '"Sacramento", cursive',
+              textShadow: '0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000'
+            }}
+          >
+            Merry <span className="text-[#ff0000]">Christmas</span> <span className="text-[#ff0000]">2025</span>
           </h1>
           {/* --- EDIT SUBTITLE HERE --- */}
-          <p className="bg-gradient-to-r from-pink-300 to-pink-500 bg-clip-text text-transparent text-lg md:text-xl mt-2 tracking-[0.1em] font-bold" style={{ fontFamily: '"Indie Flower", cursive' }}>
+          <p 
+            className="text-pink-300 text-xl md:text-2xl mt-2 tracking-[0.1em] font-bold" 
+            style={{ 
+              fontFamily: '"Sacramento", cursive',
+              textShadow: '0 0 2px #fff, 0 0 5px #fff, 0 0 10px #ff69b4, 0 0 20px #ff69b4'
+            }}
+          >
             The Third Christmas We Celebrate Together 
           </p>
         </div>
