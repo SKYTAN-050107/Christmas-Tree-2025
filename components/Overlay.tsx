@@ -15,15 +15,19 @@ const Overlay: React.FC<OverlayProps> = ({ treeState, onToggle, isTransitioning 
       <header className="flex justify-between items-start">
         <div>
           {/* --- EDIT TITLE HERE --- */}
-          <h1 
-            className="text-[#FFFF00] text-2xl md:text-4xl tracking-widest uppercase font-bold animate-flicker" 
-            style={{ 
-              fontFamily: '"Sacramento", cursive',
-              textShadow: '0 0 5px #FFFF00, 0 0 10px #FFFF00, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 90px #ff0000'
-            }}
-          >
-            Merry <span>Christmas</span> <span>2025</span>
-          </h1>
+          <div className="flex items-center gap-2 md:gap-4">
+            <span className="text-2xl md:text-4xl animate-bounce" style={{ textShadow: 'none' }}>🎄</span>
+            <h1 
+                className="text-[#FFFF00] text-2xl md:text-4xl tracking-widest uppercase font-bold animate-flicker" 
+                style={{ 
+                fontFamily: '"Sacramento", cursive',
+                textShadow: '0 0 5px #FFFF00, 0 0 10px #FFFF00, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 90px #ff0000'
+                }}
+            >
+                Merry <span>Christmas</span> <span>2025</span>
+            </h1>
+            <span className="text-2xl md:text-4xl animate-bounce" style={{ textShadow: 'none' }}>❄️</span>
+          </div>
           {/* --- EDIT SUBTITLE HERE --- */}
           <p 
             className="text-[rgb(255,50,50)] text-sm md:text-lg mt-2 tracking-[0.1em] font-bold" 
