@@ -15,17 +15,27 @@ const Overlay: React.FC<OverlayProps> = ({ treeState, onToggle, isTransitioning 
       <header className="flex justify-between items-start">
         <div>
           {/* --- EDIT TITLE HERE --- */}
-          <div className="flex items-center gap-2 md:gap-4">
+          <div className="flex items-center gap-2 md:gap-4 relative">
             <span className="text-2xl md:text-4xl animate-bounce" style={{ textShadow: 'none' }}>🎄</span>
-            <h1 
-                className="text-[#FFFF00] text-2xl md:text-4xl tracking-widest uppercase font-bold animate-flicker" 
-                style={{ 
-                fontFamily: '"Sacramento", cursive',
-                textShadow: '0 0 5px #FFFF00, 0 0 10px #FFFF00, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 90px #ff0000'
-                }}
-            >
-                Merry <span>Christmas</span> <span>2025</span>
-            </h1>
+            
+            <div className="relative">
+                {/* Decorations surrounding the text */}
+                <span className="absolute -top-6 -left-3 text-2xl animate-pulse" style={{ textShadow: 'none' }}>✨</span>
+                <span className="absolute -top-8 right-1/2 text-3xl animate-bounce delay-700" style={{ textShadow: 'none' }}>🎅</span>
+                <span className="absolute -bottom-4 -right-4 text-2xl animate-pulse delay-300" style={{ textShadow: 'none' }}>🎁</span>
+                <span className="absolute -top-5 -right-2 text-xl animate-pulse delay-150" style={{ textShadow: 'none' }}>🔔</span>
+                
+                <h1 
+                    className="text-[#FFFF00] text-2xl md:text-4xl tracking-widest uppercase font-bold animate-flicker" 
+                    style={{ 
+                    fontFamily: '"Sacramento", cursive',
+                    textShadow: '0 0 5px #FFFF00, 0 0 10px #FFFF00, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000, 0 0 90px #ff0000'
+                    }}
+                >
+                    Merry <span>Christmas</span> <span>2025</span>
+                </h1>
+            </div>
+
             <span className="text-2xl md:text-4xl animate-bounce" style={{ textShadow: 'none' }}>❄️</span>
           </div>
           {/* --- EDIT SUBTITLE HERE --- */}
