@@ -15,11 +15,11 @@ const Overlay: React.FC<OverlayProps> = ({ treeState, onToggle, isTransitioning 
       <header className="flex justify-between items-start">
         <div>
           {/* --- EDIT TITLE HERE --- */}
-          <h1 className="text-white font-serif text-3xl md:text-5xl tracking-widest uppercase" style={{ fontFamily: 'Cinzel, serif' }}>
-            Happy <span className="text-[#FFD700]">Christmas</span> <span className="text-[#FFD700]">2025</span>
+          <h1 className="text-[rgb(189,54,52)] font-serif text-3xl md:text-5xl tracking-widest uppercase" style={{ fontFamily: 'Cinzel, serif' }}>
+            Happy <span className="text-[#8B0000]">Christmas</span> <span className="text-[#8B0000]">2025</span>
           </h1>
           {/* --- EDIT SUBTITLE HERE --- */}
-          <p className="text-[#888] text-xs md:text-sm mt-2 tracking-[0.3em] uppercase font-sans">
+          <p className="bg-gradient-to-r from-pink-300 to-pink-500 bg-clip-text text-transparent text-xs md:text-sm mt-2 tracking-[0.3em] uppercase font-sans font-bold">
             The Third Christmas We Celebrate Together 
           </p>
         </div>
@@ -33,23 +33,23 @@ const Overlay: React.FC<OverlayProps> = ({ treeState, onToggle, isTransitioning 
           className={`
             group relative px-8 py-3 
             transition-all duration-700 ease-out
-            backdrop-blur-sm border border-[#FFD700]/30
+            backdrop-blur-sm border border-[#FF0000]/30
             rounded-full overflow-hidden
             opacity-30 hover:opacity-100 active:opacity-100
-            ${isTransitioning ? 'opacity-50 cursor-not-allowed grayscale' : 'hover:border-[#FFD700] hover:bg-[#FFD700]/10'}
+            ${isTransitioning ? 'opacity-50 cursor-not-allowed grayscale' : 'hover:border-[#FF0000] hover:bg-[#FF0000]/10'}
           `}
         >
           {/* Animated Background */}
           {!isTransitioning && (
-             <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-[#FFD700]/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
+             <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-[#FF0000]/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
           )}
           
           <span className="relative flex items-center gap-3">
              <span className={`
                 w-2 h-2 rounded-full transition-colors duration-500
-                ${treeState === TreeState.TREE ? 'bg-[#FFD700] shadow-[0_0_10px_#FFD700]' : 'bg-gray-500'}
+                ${treeState === TreeState.TREE ? 'bg-[#FF0000] shadow-[0_0_10px_#FF0000]' : 'bg-gray-500'}
              `} />
-             <span className="text-[#FFD700] font-serif text-lg tracking-widest uppercase">
+             <span className="text-[#FF0000] font-serif text-lg tracking-widest uppercase">
                {/* --- EDIT BUTTON TEXT HERE --- */}
                {isTransitioning 
                   ? 'Magic in progress...' 
