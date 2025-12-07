@@ -16,20 +16,20 @@ const Overlay: React.FC<OverlayProps> = ({ treeState, onToggle, isTransitioning 
         <div>
           {/* --- EDIT TITLE HERE --- */}
           <h1 
-            className="text-[rgb(255,50,50)] text-4xl md:text-6xl tracking-widest uppercase font-bold" 
+            className="text-[rgb(255,50,50)] text-2xl md:text-4xl tracking-widest uppercase font-bold animate-pulse" 
             style={{ 
               fontFamily: '"Sacramento", cursive',
-              textShadow: '0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000'
+              textShadow: '0 0 5px #fff, 0 0 10px #ff0000, 0 0 20px #ff0000'
             }}
           >
             Merry <span className="text-[#ff0000]">Christmas</span> <span className="text-[#ff0000]">2025</span>
           </h1>
           {/* --- EDIT SUBTITLE HERE --- */}
           <p 
-            className="text-pink-300 text-xl md:text-2xl mt-2 tracking-[0.1em] font-bold" 
+            className="text-[rgb(255,50,50)] text-sm md:text-lg mt-2 tracking-[0.1em] font-bold" 
             style={{ 
-              fontFamily: '"Sacramento", cursive',
-              textShadow: '0 0 2px #fff, 0 0 5px #fff, 0 0 10px #ff69b4, 0 0 20px #ff69b4'
+              fontFamily: '"Indie Flower", cursive',
+              textShadow: '0 0 2px #fff, 0 0 5px #ff0000'
             }}
           >
             The Third Christmas We Celebrate Together 
