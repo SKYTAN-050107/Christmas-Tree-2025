@@ -7,6 +7,8 @@ import ArixTree from './ArixTree';
 import LoveParticles from './LoveParticles';
 import BackgroundWords from './BackgroundWords';
 
+const isMobile = typeof navigator !== 'undefined' && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
 interface ExperienceProps {
   treeState: TreeState;
   showLoveEffect: boolean;
@@ -50,11 +52,13 @@ const Experience: React.FC<ExperienceProps> = ({ treeState, showLoveEffect }) =>
       </Float>
 
       {/* Post Processing: Disable multisampling if it causes issues on some GPUs */}
-      <EffectComposer enableNormalPass={false} multisampling={0}>
-        <Bloom luminanceThreshold={1.1} mipmapBlur intensity={0.6} radius={0.4} />
-        <Noise opacity={0.05} />
-        <Vignette eskil={false} offset={0.1} darkness={0.5} />
-      </EffectComposer>
+      {!isMobile && (
+        <EffectComposer enableNormalPass={false} multisampling={0}>
+            <Bloom luminanceThreshold={1.1} mipmapBlur intensity={0.6} radius={0.4} />
+            <Noise opacity={0.05} />
+            <Vignette eskil={false} offset={0.1} darkness={0.5} />
+        </EffectComposer>
+      )}
     </>
   );
 };

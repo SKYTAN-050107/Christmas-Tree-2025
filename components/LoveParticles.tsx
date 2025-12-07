@@ -3,7 +3,8 @@ import React, { useMemo, useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import { useFrame } from '@react-three/fiber';
 
-const PARTICLE_COUNT = 300;
+const isMobile = typeof navigator !== 'undefined' && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+const PARTICLE_COUNT = isMobile ? 100 : 300;
 
 interface LoveParticlesProps {
   active: boolean;

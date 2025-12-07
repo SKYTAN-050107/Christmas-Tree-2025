@@ -6,8 +6,9 @@ import { useTexture } from '@react-three/drei';
 import { TreeState } from '../App';
 
 // CONSTANTS
-const PARTICLE_COUNT = 7000; 
-const ORNAMENT_COUNT = 180;
+const isMobile = typeof navigator !== 'undefined' && /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+const PARTICLE_COUNT = isMobile ? 1500 : 7000; 
+const ORNAMENT_COUNT = isMobile ? 80 : 180;
 const FRAME_COUNT = 8;
 
 // PALETTE
