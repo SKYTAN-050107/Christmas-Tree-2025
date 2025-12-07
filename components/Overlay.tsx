@@ -16,7 +16,7 @@ const Overlay: React.FC<OverlayProps> = ({ treeState, onToggle, isTransitioning 
         <div>
           {/* --- EDIT TITLE HERE --- */}
           <h1 
-            className="text-[rgb(255,50,50)] text-2xl md:text-4xl tracking-widest uppercase font-bold animate-pulse" 
+            className="text-[rgb(255,50,50)] text-2xl md:text-4xl tracking-widest uppercase font-bold animate-flicker" 
             style={{ 
               fontFamily: '"Sacramento", cursive',
               textShadow: '0 0 5px #fff, 0 0 10px #ff0000, 0 0 20px #ff0000'
